@@ -20,8 +20,21 @@ body {
 }
 .letter-space {
   width: 50px;
-  border-bottom: 5px solid #2c2c2c;
+
   margin: 0 5px;
+}
+.letter-space-blank {
+  border-bottom: 5px solid #2c2c2c;
+}
+.letter-space-space {
+  min-width: 60px;
+}
+.letter-space-guessed {
+  border-bottom: none;
+  line-height: 1rem;
+  font-size: 2rem;
+  padding: 5px;
+  text-align: center;
 }
 #alphabet {
   display: grid;
@@ -35,14 +48,37 @@ body {
   font-weight: 600;
   text-align: center;
   line-height: 1rem;
-  transition: all 0.15s;
+  transition: all 0.3s ease;
   border-radius: 5px;
   cursor: pointer;
 }
 .used-letter {
-  background-color: #e7e7e7;
+  background-color: #ececec !important;
   cursor: default;
 }
-.letter:hover {
+.unguessed-letter:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.details {
+  position: fixed;
+  top: 0;
+}
+.details h2,
+.details span {
+  margin: 20px 0;
+  font-size: 1.4rem;
+}
+.game-over {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ff00003f;
+}
+
+.hidden {
+  display: none;
 }
